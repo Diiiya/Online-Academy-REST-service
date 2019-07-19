@@ -2,35 +2,39 @@ package com.onlineAcademy.service.RESTservice.model;
 
 
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType
-@XmlRootElement
-@XmlAccessorType(XmlAccessType.FIELD)
+//@XmlType
+@XmlRootElement(name = "shape")
+@XmlAccessorType(XmlAccessType.PROPERTY)
 public class Shape {
 
-	@XmlElement(name = "id")
+//	@XmlElement(name = "id")
 	private long id;
-	@XmlElement(name = "name")
+//	@XmlElement(name = "name")
 	private String name;
-	@XmlElement(name = "color")
+//	@XmlElement(name = "color")
 	private String color;
 	
+	@XmlAttribute(name = "id")
 	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
 	}
+	@XmlElement(name = "name")
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
+	@XmlElement(name = "color")
 	public String getColor() {
 		return color;
 	}
@@ -38,15 +42,15 @@ public class Shape {
 		this.color = color;
 	}
 	
+	public Shape() {
+		
+	}
+	
 	public Shape(long id, String name, String color) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.color = color;
-	}
-	
-	public Shape() {
-		
 	}
 
 	

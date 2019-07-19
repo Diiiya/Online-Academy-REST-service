@@ -17,12 +17,6 @@ public class ShapeService {
 	}
 	
 	public List<Shape> getAllShapes() {
-//		Shape shape1 = new Shape("Circle", "Purple");
-//		Shape shape2 = new Shape("Square", "Blue");
-//		List<Shape> shapes = new ArrayList<>();
-//		shapes.add(shape1);
-//		shapes.add(shape2);
-//		return shapes;
 		return new ArrayList<Shape>(shapes.values());
 	}
 	
@@ -32,6 +26,14 @@ public class ShapeService {
 	
 	public Shape addShape(Shape shape) {
 		shape.setId(shapes.size() + 1);
+		shapes.put(shape.getId(), shape);
+		return shape;
+	}
+	
+	public Shape updateShape(Shape shape) {
+		if(shape.getId() <= 0) {
+			return null;
+		}
 		shapes.put(shape.getId(), shape);
 		return shape;
 	}

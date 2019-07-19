@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 //@XmlRootElement
 public class Course {
 	
-	private int id;
+	private long id;
 	private String name;
 //	private String description;
 //	private String teacherName;
@@ -21,10 +21,10 @@ public class Course {
 ////	private Order order;
 ////	private List<Person> listOfPeople;
 //
-    public int getId() {
+    public long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -84,7 +84,7 @@ public class Course {
 //	
 //	public Course(int id, String name, String description, String teacherName, int duration, Level level,
 //			Category category, double price, boolean givesCertificate, byte[] coverPhoto) {
-	public Course(int id, String name, Level level, Category category) {
+	public Course(long id, String name, Level level, Category category) {
 		super();
 		this.id = id;
 		this.name = name;
