@@ -51,5 +51,4 @@ public class PersonResource {
 		personService.deletePerson(name);
 	}
 	
-	
 }
